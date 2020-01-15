@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+  <title>Lösungsweg</title>
+  <meta name="description" content="free website template" />
+  <meta name="keywords" content="enter your keywords here" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.easing.min.js"></script>
+  <script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
+  <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+  </script>
+</head>
+
+<body>
+  <div id="main">	
+	<div id="site_content">
+      <div id="site_heading">
+	    <h1>Meine Projekt-Website</h1>	
+	    <div id="cc-m-13208716632" class="j-module n j-htmlCode ">
+			<marquee behavior="scroll" direction="left" scrolldelay="1" scrollamount="5">
+				<font size="4" face="Arial">
+				<h2>Willkommen auf meiner Projekt-Website</h2>
+				</font>
+			</marquee>
+		</div>		
+	  </div><!--close site_heading-->
+	  <div id="header">
+	    <div id="menubar">
+          <ul id="menu">
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="aufgabenstellung.html">Aufgabenstellung</a></li>
+            <li class="current"><a href="loesungsweg.html">Lösungsweg</a></li>
+            <li><a href="ergebnisse.html">Ergebnisse</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+          </ul>
+        </div><!--close menubar-->
+      </div><!--close header-->	  
+	  <div id="banner_image">
+	    <div id="slider-wrapper">        
+          <div id="slider" class="nivoSlider">
+			<img src="images/HTL_aussen.jpg" alt="HTL von Außen mit Schülern" />
+            <img src="images/Elektronik.jpg" alt="Foto von einer fertigen Printplatte" />
+		  </div><!--close slider-->
+		</div><!--close slider_wrapper-->
+	  </div><!--close banner_image-->			  
+	  <div id="content">
+		  <h1>Dimensionierungshilfen</h1>
+		  <br />
+		  
+		  <h3>2,5V Referenzspannungsquelle</h3>
+	      <p>Verwenden Sie das Bauteil AD680AR aus der Bibliothek AD Power Mgt Voltage Reference.IntLib.
+		  Des Weiteren sollen nur die Pins IN, GND, OUT angeschlossen werden. Im Zweifelsfall soll das Datenblatt
+		  konsultiert werden</p>
+	      <br style="clear:both" />
+            
+	      <h3>1mA Messstromquelle</h3>
+	      <p>Es soll der OPV-Spannungs-zu-Strom-Wandler verwenden werden. Als Eingangsspannung dient die 2,5V
+		  Referenzspannung.</p>
+	      <br style="clear:both" />
+		  
+		  <h3>Instrumentierungsverstärker</h3>
+	      <p>Die Gesamtverstärkung des Instrumentierungsverstärker soll v=50 betragen. Der Instrumentierungsverstärker
+		  besteht bekanntlich aus Verstärkungs- und Subtraktionsteil. Der Verstärkungsteil soll auf v=50 ausgelegt werden
+		  und den Subtraktionsteil auf v=1.</p>
+	      <br style="clear:both" />
+		  
+		  <h3>Biasanpassung</h3>
+	      <p>Hintergrund: Der Ausgang des Instrumentierungsverstärker liefert bei T=0°C eine von 0V abweichende Spannung.
+		  Diese sogenannte Bias(Bias:eine dem Nutzsignal ueberlagerte konstante Groesse) muss im naechsten Schritt abgezogen
+		  werden. Addieren Sie zur Ausgangsspannung des Instrumentierungsverstärker die negative Biasspannug.</p>
+	      <br style="clear:both" />
+		  
+		  <h3>Biasspannungsquelle</h3>
+	      <p>Erzeugen Sie aus der 2,5V Referenzspannung die negative Biasspannug.</p>
+	      <br style="clear:both" />
+		  
+		  <h3>Pegelanpassung</h3>
+	      <p>Skalieren Sie das Signal so, dass es 0,2V pro °C liefert.</p>
+	      <br style="clear:both" />
+		  
+		  <h3>Pt100</h3>
+	      <p>Der Pt100 ist ein temperaturabhaengiger Widerstand. Die linearisierte (vereinfachte) Gleichung fuer
+		  den Widerstand in Abhaengigkeit der Temperatur in °C lautet: <strong>Rt(T)=T*0,389/°C+100Ω</strong>
+		  <br /><br />
+		  Achtung: Die obige Näherungsformel gilt nur im Bereich von -50 bis +100°C und hat eine Abweichung von
+		  maximal 0,3%.
+		  <br /><br />
+		  Der Pt100 wird im Vierleitermessverfahren an den Messwandler angeklemmt. Der Messstrom von
+		  1mA wird über die Klemmen I+ und I- geleitet, die Spannung am Pt100 wird nahezu stromlos ueber die Klemmen
+		  U+ und U- abgegriffen (siehe Blockschaltbild Aufgabenstellung).
+		  Durch die Vierleitermessung hat der Leitungswiderstand keinen Einfluss auf das Messergebnis.
+		  
+	      <br style="clear:both" />
+		  
+	      <!--<h3>Example 3</h3>
+          <br/>
+	      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis sapien vel orci posuere tristique quis
+		  vitae nisi. Sed porta venenatis auctor. Fusce iaculis ligula odio. Etiam malesuada dui sit amet eros pharetra
+		  interdum. Phasellus consectetur blandit nulla, quis laoreet tellus condimentum nec. Integer diam tellus, molestie
+		  id convallis in, pellentesque tempus arcu. In congue ornare laoreet. Ut vel dui tincidunt quam sollicitudin aliquet
+		  ut a nibh.</p>
+	      <br style="clear:both" />--> 
+      </div><!--close content-->
+		
+	  <!--<div class="sidebar_container1">
+		</br></br></br></br></br></br></br></br></br></br></br></br>
+		</br></br></br></br></br></br></br></br></br></br></br></br>
+		</br></br></br></br></br></br></br></br></br></br></br></br>
+		</br></br></br></br></br></br>
+		<img src="images/Pt100.png" alt="Fotot Pt100" style="bottom:0px;floating:right;height:300px;right:300px;"> 
+	  </div><!--close sidebar_container-->
+	  
+      <!--<div class="sidebar_container">  		  
+		<div class="sidebar">
+          <div class="sidebar_item">
+            <h2>Latest Blog</h2>
+			<h4>April 2012</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque cursus tempor enim.</p>
+		      <a href="#">Read more</a>
+           </div><!--close sidebar_item--> 
+         <!--</div><!--close sidebar-->   
+		 
+	    <!--<div class="sidebar">
+          <div class="sidebar_item">
+            <h2>Latest Blog</h2>
+		  	<h4>April 2012</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque cursus tempor enim.</p>
+		      <a href="#">Read more</a>
+          </div><!--close sidebar_item--> 
+        <!--</div><!--close sidebar-->  
+		
+		<!--<div class="sidebar">
+          <div class="sidebar_item">
+            <h2>Latest Blog</h2>
+			<h4>April 2012</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque cursus tempor enim.</p>
+		      <a href="#">Read more</a>
+          </div><!--close sidebar_item--> 
+        <!--</div><!--close sidebar-->  
+		
+      <!--</div><!--close sidebar_container-->
+	  
+      </div><!--close site_content-->	
+    
+    <div id="footer">  
+      <!--<a href="http://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a> |
+	  <a href="http://fotogrph.com/">Images</a> |-->
+	  designed by <a href="Lebenslauf_website.html">Sebastian Auer</a> |
+	  <a href="impressum.html">Impressum</a> |
+	  template by <a href="http://www.araynordesign.co.uk">ARaynorDesign</a>
+    </div><!--close footer-->			
+  </div><!--close main-->	
+</body>
+</html>
